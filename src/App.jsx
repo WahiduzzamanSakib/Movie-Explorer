@@ -1,4 +1,5 @@
 import './App.css'
+import Footer from './components/Footer'
 import Navbar from './components/Navbar'
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
  <h1 className="text-4xl font-bold text-center mt-10">
       Movie Explorer
     </h1>
-    
+    <Footer />
     </>
   )
 }
