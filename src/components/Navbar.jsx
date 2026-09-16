@@ -14,7 +14,7 @@ const Navbar = () => {
           <div className="flex items-center gap-4 sm:gap-8">
             <a
               href="/"
-              className="text-gray-300 hover:text-white transition"
+              className="text-gray-300 hover:text-white transition hidden sm:block"
             >
               Home
             </a>

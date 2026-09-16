@@ -1,17 +1,46 @@
 import './App.css'
+import Banner from './components/Banner'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
 
-function App() {
 
+import { createBrowserRouter, Outlet } from "react-router";
+import { RouterProvider } from "react-router/dom";
+import Movies from './components/Movies';
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: (
+      <>
+        <Navbar />
+        <Outlet />
+        <Footer />
+      </>
+    ),
+    children: [
+      {
+        index: true,
+        element: <Banner />,
+      },
+      {
+        path: 'details',
+        element: <h1>Details Page</h1>,
+      },
+      {
+        path: 'movies',
+        element: <Movies />,
+      },
+    ],
+  },
+])
+
+
+function App() {
 
   return (
     <>
-      <Navbar />
- <h1 className="text-4xl font-bold text-center mt-10">
-      Movie Explorer
-    </h1>
-    <Footer />
+        <RouterProvider router={router} />
     </>
   )
 }
