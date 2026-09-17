@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import DetailsModal from "./DetailsModal";
+import { Link } from "react-router";
 
-function Movies() {
+function FeatuersMovie() {
     const [shows, setShows] = useState([]);
-    const [searchTerm, setSearchTerm] = useState("");
     const [selectedMovie, setSelectedMovie] = useState(null);
 
     useEffect(() => {
@@ -17,28 +17,20 @@ function Movies() {
             });
     }, []);
 
-    const filteredShows = shows.filter((movie) =>
-        movie?.name?.toLowerCase().includes(searchTerm.toLowerCase())
-    );
+
 
     return (
-        <div className="bg-slate-950 text-white min-h-screen p-6">
-            <h1 className="text-3xl font-bold text-center mb-6">
-                All Shows
-            </h1>
-
-            <div className="max-w-md mx-auto mb-8">
-                <input
-                    type="text"
-                    placeholder="Search show by name..."
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full px-4 py-2 bg-slate-900 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-blue-500"
-                />
+        <div className="bg-slate-950 text-white  px-6 py-8 border-t border-slate-700">
+            <div className="flex justify-between items-center">
+                <h1 className="text-3xl font-bold text-center mb-6">
+                    Featuers Movies
+                </h1>
+                <Link to="/movies" className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg transition cursor-pointer">View All</Link>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                {filteredShows?.map((movie) => (
+
+            <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {shows?.slice(0, 3).map((movie) => (
                     <div
                         key={movie?.id}
                         className="bg-slate-900 rounded-lg overflow-hidden border border-slate-800 flex flex-col justify-between"
@@ -95,4 +87,4 @@ function Movies() {
     );
 }
 
-export default Movies;
+export default FeatuersMovie;

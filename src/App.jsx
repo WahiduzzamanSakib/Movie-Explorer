@@ -7,6 +7,7 @@ import Navbar from './components/Navbar'
 import { createBrowserRouter, Outlet } from "react-router";
 import { RouterProvider } from "react-router/dom";
 import Movies from './components/Movies';
+import FeatuersMovie from './components/FeatuersMovie';
 
 const router = createBrowserRouter([
   {
@@ -21,12 +22,14 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Banner />,
+        element: (
+          <>
+            <Banner />
+            <FeatuersMovie />
+          </>
+        ),
       },
-      {
-        path: 'details',
-        element: <h1>Details Page</h1>,
-      },
+      
       {
         path: 'movies',
         element: <Movies />,
@@ -40,7 +43,7 @@ function App() {
 
   return (
     <>
-        <RouterProvider router={router} />
+      <RouterProvider router={router} />
     </>
   )
 }
