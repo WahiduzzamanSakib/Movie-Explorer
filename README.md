@@ -1,16 +1,63 @@
-# React + Vite
+# 🎬 Movie Explorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive movie browsing app built with React, where users can explore movies, search for titles, and view detailed information in an interactive modal.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+🔗 Live Website: https://movie-exporerr.netlify.app/
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tech Stack
 
-## Expanding the ESLint configuration
+- **Core:** JavaScript, React
+- **Styling:** Tailwind CSS
+- **Data Source:** [TVMaze API](https://www.tvmaze.com/api)
+- **Deployment:**  Netlify
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Features
+
+- **Home Page**
+  - Navbar with logo and navigation links
+  - Hero banner with CTA button linking to the Movie Listing page
+  - Footer with app info and copyright
+- **Movie Listing Page**
+  - Live search by movie title
+  - Responsive grid of movie cards (poster, title, release year, rating)
+  - "See Details" button on each card
+- **Movie Details Modal**
+  - Backdrop/poster image, title, overview, rating, and release date
+  - Closable via the ✕ button or by clicking outside the modal
+- **Fully Responsive**
+ 
+
+
+
+
+## ⚙️ Getting Started
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/WahiduzzamanSakib/Movie-Explorer
+   ```
+2. **Entry Folder/Project**
+   ```bash
+   cd Movie-Explorer
+   ```
+3. **Install dependencies**
+   ```bash
+   npm install
+   ```
+4. **Run the development server**
+   ```bash
+   npm run dev
+   ```
+5. Open `http://localhost:5173` (or the port shown in your terminal) in your browser.
+
+## 🧑‍💻 Author
+
+**Md. Waheduzzaman**
+- LinkedIn: www.linkedin.com/in/waheduzzaman-md
+
+## 📄 License
+
+This project was built as a course assignment and is for educational purposes.
