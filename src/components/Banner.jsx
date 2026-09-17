@@ -1,12 +1,8 @@
-import { useNavigate } from 'react-router-dom';
+import { Link } from "react-router";
+
 
 const HeroBanner = () => {
-  const navigate = useNavigate();
-
-  const handleExploreClick = () => {
-      navigate('/movies');
-      window.location.reload();
-  };
+ 
 
   return (
     <section className="relative w-full h-[85vh] flex items-center justify-center overflow-hidden bg-slate-950">
@@ -38,12 +34,12 @@ const HeroBanner = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <button
-            onClick={handleExploreClick}
+          <Link
+           to="/movies"
             className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-500 hover:to-rose-500 text-white font-semibold rounded-xl shadow-lg shadow-red-600/30 transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-slate-950 cursor-pointer"
           >
             Explore Now 🎬
-          </button>
+          </Link>
         </div>
       </div>
     </section>
